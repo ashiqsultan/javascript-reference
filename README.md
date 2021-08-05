@@ -89,10 +89,46 @@ const array1 = [5, 12, 8, 130, 44];
 const found = array1.find(element => element > 10); // 12
 ```
 
+# Object Functions
+## Loop over an object
+### for...in
+The for...in statement iterates over all enumerable properties of an object that are keyed by strings (ignoring ones keyed by Symbols), including inherited enumerable properties.
+```
+const object = { a: 1, b: 2, c: 3};
 
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+// expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
 
+```
 
+## Get all keys of an Object as Array
+```
+const obj = {a:1,b:2,c:3}
+Object.keys(obj)  // ["a", "b", "c"]
+```
 
+## Get all values of an Object as Array
+```
+const o = {a:1,b:2,c:3}
+Object.values(obj)  // [1,2,3]
+```
 
+## Add a new property to Object
+```
+const obj = {a:1,b:2,c:3}
+obj.d = 4
+console.log(obj) // {a: 1, b: 2, c: 3, d: 4}
+```
 
+## Delete a property from Object
+```
+const obj = {a:1,b:2,c:3}
+delete obj.c
+console.log(obj) // {a: 1, b: 2}
+```
 
