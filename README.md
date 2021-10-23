@@ -88,6 +88,23 @@ The find() method returns the value of the first element in the provided array t
 const array1 = [5, 12, 8, 130, 44];
 const found = array1.find(element => element > 10); // 12
 ```
+### some()
+The some() method tests whether at least one element in the array passes the test implemented by the provided function.
+``` 
+const array = [1, 2, 3, 4, 5];
+// checks whether an element is even
+const even = (element) => element % 2 === 0;
+console.log(array.some(even));
+// expected output: true
+```
+### every()
+The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+```
+const isBelowThreshold = (currentValue) => currentValue < 40;
+const array1 = [1, 30, 39, 29, 10, 13];
+console.log(array1.every(isBelowThreshold));
+// expected output: true
+```
 
 # Object Functions
 ## Loop over an object
